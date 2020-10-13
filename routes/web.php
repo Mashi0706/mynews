@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+//commmitの練習
 Route::group(['prefix' => 'admin'], function(){
     Route::get('news/create',
 'Admin\NewsController@add');
