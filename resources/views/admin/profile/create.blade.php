@@ -1,24 +1,16 @@
-<!DOCTYPE htmk>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatiible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        
-        <title>Mashi's blog</title>
-    </head>
-    <body>
-        @extends('layouts/profile')
-        @section('title')
-        @section('content')
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-        <h1>Mashi's blog create view</h1>
-        
-                    <h2></h2>
-                </div>
+{{-- layouts/admin.blade.phpを読み込む --}}
+@extends('layouts.profile')
+
+{{-- admin.blade.phpの@yield('title')に'ニュース新規作成'を埋め込む --}}
+@section('title','Profileの新規作成')
+
+{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>プロフィール新規作成</h2>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+@endsection
