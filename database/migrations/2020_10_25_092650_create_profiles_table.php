@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsTable extends Migration
+class CreateProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,9 +16,9 @@ class CreateNewsTable extends Migration
         Schema::create('profiles', function (Blueprint $profiles) {
             $profiles->bigIncrements('id');
             $profiles->string('name');
-            $profiles->strings('gender');
-            $profiles->strings('hobby');
-            $profiles->strings('introduction');
+            $profiles->string('gender');
+            $profiles->string('hobby');
+            $profiles->string('introduction');
             $profiles->timestamps();
         });
     }
