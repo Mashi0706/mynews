@@ -61,3 +61,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// PHP/Laravel19 routes/web.php の1番下に次の内容を追記して下さい。
+Route::get('/', 'NewsController@index');
