@@ -25,7 +25,7 @@ Route::get('/', function () {
 // });
  
 
-//PHP/Laravel15 Routingを実装する
+//PHP/Laravel15 Routingを実装する管理側
  Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
     Route::post('news/create', 'Admin\NewsController@create')->middleware('auth');
@@ -40,6 +40,7 @@ Route::get('/', function () {
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::post('profile/edit', 'Admin\ProfileController@update');//PHP/Laravel13課題6
     Route::get('profile', 'Admin\ProfileController@index')->middleware('auth'); // 追記
+    
     
     
 });
@@ -63,3 +64,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // PHP/Laravel19 routes/web.php の1番下に次の内容を追記して下さい。
 Route::get('/', 'NewsController@index');
+// 左(URL)から右(Controller action)に渡す
+Route::get('/profile','ProfileController@index');

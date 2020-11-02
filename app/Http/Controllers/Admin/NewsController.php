@@ -70,8 +70,8 @@ class NewsController extends Controller
           $news_form['image_path'] = null;
       } elseif ($request->file('image')) {
           $path = $request->file('image')->store('public/image');
-          $news_form['image_path']=basement($path);
-          }else{
+          $news_form['image_path'] = basename($path);
+      } else {
           $news_form['image_path'] = $news->image_path;
       }
           unset($news_form['_token']);
